@@ -1,4 +1,5 @@
 <?php
+
 /*
 Plugin Name: Inpsyde Users
 Plugin URI: https://cagdasdag.com/
@@ -9,3 +10,9 @@ Author URI: https://cagdasdag.com/
 License: GPLv2 or later
 Text Domain: inpsydeusers
 */
+
+declare(strict_types=1);
+
+require_once 'env.php';
+require_once 'vendor/autoload.php';
+$loader = new \InpsydeUsers\Autoload();

@@ -1,0 +1,101 @@
+.inpsyde-popup {
+  &-modal-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 30px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+  }
+
+  &-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 73, 94, 0.8);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.7s;
+
+    &.active, &.active + .inpsyde-popup-modal {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 800px;
+    min-height: 300px;
+    background: white;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #fcd779;
+    border-top: 4px solid white;
+    border-radius: 50%;
+    transition-property: transform;
+    animation-name: rotate;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.hide {
+      display:none;
+    }
+  }
+
+  &-wrapper {
+    padding:40px 30px;
+  }
+}
+
+.inpsyde-users{
+  &-title{
+    padding-bottom:10px;
+    border-bottom: 1px solid grey;
+    margin-bottom:10px;
+  }
+
+  &-detail {
+    display: flex;
+    padding: 10px 0;
+    border-bottom:1px solid lightgrey;
+
+    &-left{
+      width:40%;
+      font-size:15px;
+      font-weight: bold;
+    }
+
+    &-right{
+      width:60%;
+      font-size:18px;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

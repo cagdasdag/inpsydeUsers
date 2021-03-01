@@ -1,0 +1,26 @@
+{
+  "name": "inpsydeusers",
+  "version": "1.0.0",
+  "description": "**Applicant Name:** Çağdaş Dağ",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cagdasdag/inpsydeUsers.git"
+  },
+  "author": "Cagdas Dag <cagdasdag81@gmail.com> (http://www.cagdasdag.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cagdasdag/inpsydeUsers/issues"
+  },
+  "homepage": "https://github.com/cagdasdag/inpsydeUsers#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}

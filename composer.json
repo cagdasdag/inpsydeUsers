@@ -11,9 +11,10 @@
             "InpsydeUsers\\": "includes/"
         }
     },
-    "require": {},
     "require-dev": {
-        "inpsyde/php-coding-standards": "^1"
+        "inpsyde/php-coding-standards": "^1",
+        "brain/monkey": "^2.2",
+        "phpunit/phpunit": "~8.0.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
