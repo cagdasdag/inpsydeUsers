@@ -16,13 +16,12 @@ class Api
      */
     public function dataParserFromApi(string $apiUrl)
     {
-        $data = [];
         if (!empty($apiUrl)) {
             $uniqueKey = md5(json_encode(['apiUrl' => $apiUrl]));
             $transientKey = 'inpysde_' . $uniqueKey;
             $data = get_transient($transientKey);
             if (empty($data)) {
-                $this->sendRequestToApi($apiUrl, $transientKey);
+                $data = $this->sendRequestToApi($apiUrl, $transientKey);
             }
         }
 
@@ -40,7 +39,7 @@ class Api
     public function sendRequestToApi(string $apiUrl, string $transientKey)
     {
         $request = wp_remote_get($apiUrl);
-        $data = [];
+        $data = false;
         if (!is_wp_error($request)) {
             $result = null;
 

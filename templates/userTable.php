@@ -8,7 +8,7 @@ declare(strict_types=1);
  */
 get_header();
 ?>
-
+    <?php if($userList): ?>
     <div class="inpsyde-wrapper">
         <table class="inpsyde-users">
             <thead>
@@ -46,4 +46,9 @@ get_header();
             <button class="inpsyde-popup-modal-close" role="button">X</button>
         </div>
     </div>
+    <?php else: ?>
+        <div class="inpsyde-wrapper">
+            <h3><?php esc_html_e('We have some troubles to get data from API. Please try again.', 'inpsydeUsers') ?></h3>
+        </div>
+    <?php endif; ?>
 <?php get_footer(); ?>
